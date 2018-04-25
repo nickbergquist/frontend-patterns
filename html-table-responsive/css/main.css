@@ -1,0 +1,49 @@
+* { 
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box /* not inherited by default */
+}
+*, *:before, *:after {
+	-webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit /* apply desired box model to all but allowing local change */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+caption { 
+    margin-bottom: 1em;
+    text-align: left
+}
+
+table {
+    margin: 0 auto 0.75em auto;
+	table-layout: fixed;
+    text-align: left;
+    width: 90%
+}
+
+.js .table-compact td { 
+    display: block;
+}
+
+.js .table-compact td:before { 
+    content: attr(data-th) ": "; 
+    display: inline-block;
+    font-weight: bold;
+    width: 20%
+}
+
+.js .table-compact tr { 
+    display: block;
+    margin-bottom: 1em;
+}
+
+.off-screen {  /* invisible only */
+    height: 1px;
+    left: -999em;
+    overflow: hidden;
+    position: absolute;
+    width: 1px
+}
