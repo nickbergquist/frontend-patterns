@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Floating label form inputs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="" />
+    <meta name="subject" content="" />
+    <link href="styles.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+
+    <form class="form-css-only">
+        <fieldset>
+            <legend>CSS only</legend>
+            <p>
+                <input id="txtInput1" type="text" name="name" class="input-form" required />
+                <label for="txtInput1"><span>Field Label</span></label>
+            </p>
+            <p>Where CSS selectors alone apply down the DOM tree, the &lt;input&gt; on which events are based is placed before the &lt;label&gt; on which display actions are taken. As long as the &lt;input&gt; and the &lt;label&gt; are explicitely associated this presents no accessibility problems.</p>
+        </fieldset>
+    </form>
+
+    <form class="form-css-js">
+        <fieldset>
+            <legend>CSS &amp; JS</legend>
+            <p>
+                <label for="txtInput2" class="label-form"><span>Field Label</span></label>
+                <input id="txtInput2" type="text" name="name" class="input-form" required />
+            </p>
+            <p>Using Javascript allows the &lt;label&gt; and the &lt;input&gt; to be in the correct order in the DOM as scripting allows navigation up the DOM tree, events on the &lt;input&gt; influencing the &lt;label&gt; render by switching HTML classes.</p>
+        </fieldset>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>   

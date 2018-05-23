@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* { 
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box /* not inherited by default */
+}
+*, *:before, *:after {
+	-webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit /* apply desired box model to all but allowing local change */
+}
+
+body {
+    font-family: 'Open Sans',Sans-serif;
+    font-size: 1.2em;
+    margin: 2em auto 0 auto;
+    width: 90%;
+}
+
+form {
+  margin-bottom: 2em;
+}
+
+form p {
+  font-size: .75em;
+  margin-bottom: 1em;
+}
+
+fieldset {
+  padding: 1em 1em 1.5em;
+}
+
+legend {
+  padding: 0 .5em;
+}
+
+.input-form {
+  border: 1px solid #ccc;
+  display: block;
+  padding: 5px;
+  width: 100%;
+}
+  
+/* ~~~~~~~~~~~~ */
+
+
+.form-css-only .input-form + label {
+    display: block;
+    left: 10px;
+    position: relative;
+}
+
+.form-css-only .input-form + label > span {
+    color: #666;
+    font-size: 1.25em;
+    left: 0;
+    padding: 0 5px;
+    position: absolute;
+    top: -1.5em;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+.form-css-only .input-form:focus + label > span,
+.form-css-only .input-form:valid + label > span {
+    background-color: #fff;
+    color: #999;
+    padding-bottom: 0;
+    top: -3.3em;
+    font-size: .8em;
+}
+
+/* ~~~~~~~~~~~~ */
+
+
+.form-css-js .label-form {
+  font-size: .7em;
+}
+
+.form-css-js.labels-floated .label-form {
+    display: block;
+    left: 10px;
+    position: relative;
+}
+
+.form-css-js.labels-floated .label-form span {
+    color: #666;
+    font-size: 1.75em;
+    left: 0;
+    padding: 0 5px;
+    position: absolute;
+    top: .2em;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+.form-css-js.labels-floated .label-form .focus {
+    background-color: #fff;
+    color: #999;
+    top: -.8em;
+    font-size: 1.2em;
+}
+  
