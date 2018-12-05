@@ -42,6 +42,10 @@ legend {
   padding: 5px;
   width: 100%;
 }
+
+input:required {
+  box-shadow: none; /* clear the red border in FF */
+}
   
 /* ~~~~~~~~~~~~ */
 
