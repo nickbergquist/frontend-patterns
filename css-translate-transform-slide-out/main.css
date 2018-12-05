@@ -1,0 +1,80 @@
+/* Begin: Reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, legend, input, textarea, p, blockquote, th, td, figure {
+	margin: 0;
+	padding: 0
+}
+
+ul {
+	list-style: none
+}
+
+/* End: Reset */
+
+body {
+    background-color: #999;
+    min-height: 1280px;
+}
+
+html {
+	box-sizing: border-box /* not inherited by default */
+}
+*, *:before, *:after {
+	box-sizing: inherit /* apply desired box model to all but allowing local change */
+}
+
+.widget {
+    background-color: #fff;
+    cursor: pointer;
+    display: none;
+    max-width: 400px;
+    margin: 0 auto;
+    position: fixed;
+    top: 120px;
+    right: 0;
+    transform: translateX(360px);
+    z-index: 101;
+  }
+
+  @media screen and (min-width: 768px) {
+    .widget {
+      display: flex;
+    }
+  }
+
+.widget.enter {
+    transition: transform 0.6s ease-in;
+    transform: translateX(0);
+}
+
+.widget.leave {
+    transition: transform 0.3s ease-out;
+    transform: translateX(360px);
+}
+
+.widget .widget-tab {
+    background: #06c;
+  	color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 40px;
+    letter-spacing: 3px;
+    padding-top: 16px;
+    padding-left: 20px;
+}
+
+.widget .widget-tab .rotate-text {
+    display: inline-block;
+    transform: rotate(90deg);
+    transform-origin: left;
+  	white-space: nowrap;
+}
+
+.widget .widget-body {
+    background: #fff;
+    box-shadow: 10px 10px 35px -20px #000;
+    margin: auto;
+    min-height: 300px; /* replace with HTML content */
+    padding: 5px 10px 15px;
+  }
